@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+.env
+.DS_Store
+.git
+.vscode
+dist
+build
+*.log
+.venv
+tests
+pytest.ini
+.coverage
+.coveragerc
+.env.example
+.idea
