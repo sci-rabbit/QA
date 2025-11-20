@@ -12,13 +12,8 @@ RUN pip install --no-cache-dir poetry \
 
 COPY . /app/
 
-
-COPY entrypoint.sh /app/entrypoint.sh
-RUN chmod +x /app/entrypoint.sh
-
-
 ENV PYTHONUNBUFFERED=1
 
 EXPOSE 8000
 
-CMD ["/app/entrypoint.sh"]
+CMD ["sh", "-c", "alembic upgrade head && python main.py"]
