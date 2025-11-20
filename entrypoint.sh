@@ -1,7 +1,4 @@
-#!/bin/sh
-# entrypoint.sh
-
-# Прогоняем миграции
-alembic upgrade head
-
-exec python main.py
+#!/bin/sh$
+set -e$
+alembic upgrade head$
+exec python main.py$

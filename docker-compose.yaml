@@ -12,10 +12,10 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  qa_backend:
+  backend:
     build:
       dockerfile: Dockerfile
-    container_name: qa_backend
+    container_name: backend
     working_dir: /app
     ports:
       - "8000:8000"
