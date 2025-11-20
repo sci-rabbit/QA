@@ -1,11 +1,11 @@
 from datetime import datetime
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class BaseAnswerSchema(BaseModel):
-    text: str
-    user_id: str
+    text: str = Field(min_length=1)
+    user_id: str = Field(min_length=1)
 
 
 class CreateAnswerSchema(BaseAnswerSchema):
